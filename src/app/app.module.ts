@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRouteModule } from './app-route.module';
 import { AppComponent } from './app.component';
@@ -8,8 +10,18 @@ import { HeaderComponent } from './header/header.component';
 import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NaoEncontradoComponent],
-  imports: [BrowserModule, AppRouteModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NaoEncontradoComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRouteModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
